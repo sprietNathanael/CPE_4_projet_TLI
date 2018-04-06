@@ -1,0 +1,17 @@
+.grid_wrapper {
+	display: grid;
+	grid-template-columns: 15% 70% 15%;
+}
+
+.grid_one {
+    grid-column: 1;
+    border: 2px solid red;
+}
+.grid_two {
+    grid-column: 2;
+    border: 2px solid blue;
+}
+.grid_three {
+    grid-column: 3;
+    border: 2px solid magenta;
+}
