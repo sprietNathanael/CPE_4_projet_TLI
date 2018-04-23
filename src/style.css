@@ -3,6 +3,16 @@
 	grid-template-columns: 15% 70% 15%;
 }
 
+#titleBar{
+    background-color: rgb(49, 114, 245)
+    /* background-color:  rgb(255, 153, 51); */
+}
+
+#titleBar > h1{
+    grid-column: 2;
+    text-align: center;
+}
+
 .grid_one {
     grid-column: 1;
     border: 2px solid red;
@@ -15,3 +25,4 @@
     grid-column: 3;
     border: 2px solid magenta;
 }
+
