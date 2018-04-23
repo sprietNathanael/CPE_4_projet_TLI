@@ -11,7 +11,7 @@
     <div id="titleBar" class="grid_wrapper">
         <h1>{block name=title}Titre par defaut{/block}</h1>
     </div>
-    <div class="grid_wrapper" id="content_grid" onscroll="updateScrollShadow()">
+    <div class="grid_wrapper" id="content_grid">
         <div class="grid_one"></div>
         <div class="grid_two">
             {block name=content}Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae molestie libero, id pretium velit. Duis malesuada elit libero, ac pellentesque est eleifend ac. Nulla facilisi. Duis ultrices est ut neque vehicula, id molestie eros faucibus. Cras ut elit sit amet odio vulputate euismod. Proin ac turpis augue. Donec consequat metus id consectetur vestibulum. Vestibulum vitae dignissim nulla. Nunc ante dui, fringilla vel urna a, condimentum rutrum velit. Integer laoreet tellus at libero condimentum dignissim. Etiam laoreet, est eu fringilla lobortis, urna diam interdum elit, vitae laoreet lorem turpis eu leo.
@@ -37,9 +37,9 @@
         <div class="grid_three"></div>
     </div>
     <script>
-        function updateScrollShadow()
+        document.getElementById("content_grid").addEventListener('scroll',function(e)
         {
-            if(event.srcElement.scrollTop === 0)
+            if(this.scrollTop === 0)
             {
                 document.getElementById("titleBar").classList.remove("bar_scrolled");
             }
@@ -47,7 +47,7 @@
             {
                 document.getElementById("titleBar").classList.add("bar_scrolled");
             }
-        }
+        });
     </script>
 
 </body>
