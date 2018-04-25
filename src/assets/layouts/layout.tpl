@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Accu</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Pikouz</title>
 </head>
 <body>
     <div id="titleBar" class="grid_wrapper">
+        <div class="siteTitle">Pikouz</div>
         <h1>{block name=title}Titre par defaut{/block}</h1>
+        <nav>
+            <ul>
+                <a href="index.php"><li {if isset($currentPage) && $currentPage == "accueil"}class="currentPage"{/if}>Accueil</li></a>
+                <a href="search.php"><li {if isset($currentPage) && $currentPage == "recherche"}class="currentPage"{/if}>Recherche</li></a>
+                <a href="info.php"><li {if isset($currentPage) && $currentPage == "informations"}class="currentPage"{/if}>Informations</li></a>
+                <a href="diseases.php"><li {if isset($currentPage) && $currentPage == "pathologies"}class="currentPage"{/if}>Pathologies</li></a>
+            </ul>
+        </nav>
     </div>
     <div class="grid_wrapper" id="content_grid">
         <div class="grid_one"></div>
