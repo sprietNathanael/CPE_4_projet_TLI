@@ -53,4 +53,3 @@ $diseases = array(
 $smarty = new Smarty();
 $smarty->assign('diseases', $diseases);
 $smarty->display("diseases.tpl");
-?>
