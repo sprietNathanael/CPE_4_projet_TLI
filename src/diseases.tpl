@@ -32,4 +32,4 @@
         </tbody>
     </table>
 </main>
-
+{/block}
