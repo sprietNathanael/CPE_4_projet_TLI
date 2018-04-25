@@ -10,6 +10,14 @@
 <body>
     <div id="titleBar" class="grid_wrapper">
         <h1>{block name=title}Titre par defaut{/block}</h1>
+        <nav>
+            <ul>
+                <a href="index.php"><li {if isset($currentPage) && $currentPage == "accueil"}class="currentPage"{/if}>Accueil</li></a>
+                <a href="search.php"><li {if isset($currentPage) && $currentPage == "recherche"}class="currentPage"{/if}>Recherche</li></a>
+                <a href="info.php"><li {if isset($currentPage) && $currentPage == "informations"}class="currentPage"{/if}>Informations</li></a>
+                <a href="diseases.php"><li {if isset($currentPage) && $currentPage == "pathologies"}class="currentPage"{/if}>Pathologies</li></a>
+            </ul>
+        </nav>
     </div>
     <div class="grid_wrapper" id="content_grid">
         <div class="grid_one"></div>
