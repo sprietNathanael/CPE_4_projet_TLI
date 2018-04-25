@@ -12,6 +12,7 @@ body{
     position:  absolute;
     overflow: scroll;
     top: 10vh;
+    width: 100%;
 }
 
 #titleBar{
