@@ -33,4 +33,3 @@
     </table>
 </main>
 
-{/block}
