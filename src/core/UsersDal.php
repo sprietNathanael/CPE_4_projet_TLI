@@ -84,6 +84,15 @@ class UsersDal
         }
     }
 
+    public function delete($idU)
+    {
+        $connClass = new ConnectionBd();
+        $conn = $connClass->getConnection();
+
+        $query = $conn->prepare('DELETE FROM Users WHERE idU = ?');
+        $query->execute(array($idU));
+    }
+
 }
 
 //$usersDal = new UsersDal();
@@ -95,3 +104,4 @@ class UsersDal
 //var_dump($add);
 //$co = $usersDal->connection('test2','test3');
 //var_dump($co);
+//$usersDal->delete(1);
