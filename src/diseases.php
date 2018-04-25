@@ -52,4 +52,5 @@ $diseases = array(
 // echo $diseases;
 $smarty = new Smarty();
 $smarty->assign('diseases', $diseases);
+$smarty->assign('currentPage', "pathologies");
 $smarty->display("diseases.tpl");
