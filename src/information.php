@@ -16,4 +16,5 @@ $smarty->assign('listSource', $source);
 $smarty->assign('listAuthors', $authors);
 $smarty->assign('listBibliographie', $bibliographie);
 $smarty->assign('listWebographie', $webographie);
+$smarty->assign('currentPage', "informations");
 $smarty->display("information.tpl");
