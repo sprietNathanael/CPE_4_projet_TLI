@@ -10,25 +10,88 @@ include "ConnectionBd.php";
 
 class UsersDal
 {
+    /**
+     * @param $username
+     * @param $password
+     * @return true if user found
+     *
+     */
     public function connection($username, $password)
     {
-        //try {
-            $connClass = new ConnectionBd();
-            $conn = $connClass->getConnection();
+        $user = $this->getOneByUsername($username);
 
-            $query = $conn->prepare('SELECT * Users WHERE pseudo = ? AND password = ?');
-            // mettre en place les cookies et session
-            $query->execute(array($username, $password));
-            $user = $query->rowCount();
-            printf($user);
+        $passwordToCompare = $user['password'];
+        if ($passwordToCompare == null)
+            return false;
 
-        /*} catch (Exception $e) {
-            printf("<Erreur !: " . $e->getMessage() . "<br/>");
+        $password = md5((md5($password) . $user['idU']));
 
-        }*/
+        return ($passwordToCompare == $password);
+    }
+
+    public function getOneByUsername($username)
+    {
+        $connClass = new ConnectionBd();
+        $conn = $connClass->getConnection();
+
+        $query = $conn->prepare('SELECT * FROM Users WHERE pseudo = ?');
+        $query->execute(array($username));
+        return ($query->fetch());
+    }
+
+    /**
+     * @param $username
+     * @param $password
+     * @param $nom
+     * @param $prenom
+     * @return true if user has added
+     */
+    public function add($username, $password, $nom, $prenom)
+    {
+        $connClass = new ConnectionBd();
+        $conn = $connClass->getConnection();
+
+        // test si utilisateur avec meme username existe
+        $userExist = $this->getOneByUsername($username);
+        if ($userExist['idU'] != null)
+            return false;
+
+        $passMD5 = md5($password);
+
+        try {
+            $conn->beginTransaction();
+            // récupération lastID
+            $queryPdo = $conn->query("SELECT idU FROM `users` ORDER BY idU desc LIMIT 1");
+            $user = $queryPdo->fetch();
+            $lastIdU = $user["idU"];
+            if ($lastIdU == null)
+                $lastIdU = 0;
+
+            // salage du MD5
+            $passMD5 = md5($passMD5 . ($lastIdU + 1));
+
+            // Insertion de l'user
+            $insert = $conn->prepare("INSERT INTO Users(pseudo, password, nom, prenom)
+                               VALUES(?, ?, ?, ?)");
+            $insert->execute(array($username, $passMD5, $nom, $prenom));
+            $conn->commit();
+            return true;
+
+        } catch (PDOException $e) {
+            $conn->rollBack();
+            print "Erreur !: " . $e->getMessage() . "<br/>";
+            return false;
+        }
     }
 
 }
 
-$usersDal = new UsersDal();
-$usersDal->connection('test', 'test');
+//$usersDal = new UsersDal();
+//$add = $usersDal->add('test', 'test2', '', '');
+//var_dump($add);
+//$co = $usersDal->connection('test','test2');
+//var_dump($co);
+//$add = $usersDal->add('test2', 'test3', '', '');
+//var_dump($add);
+//$co = $usersDal->connection('test2','test3');
+//var_dump($co);
