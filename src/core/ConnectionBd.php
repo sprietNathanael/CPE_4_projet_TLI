@@ -6,7 +6,7 @@
  * Time: 14:32
  */
 
-class Connection
+class ConnectionBd
 {
     function getConnection()
     {
