@@ -1,73 +1,52 @@
-{extends file="layout.tpl"}
+{extends file="assets/layouts/layout.tpl"}
 {block name=title}Information{/block}
 {block name=content}
-<main>
 
-      <table cellspacing="0" cellpadding="0"; font-family:verdana; font-size:48;">
-           <thead>
-                   <tr>
-                       <th style="width:240; color:DarkCyan" >Developpements personnels</th>
-                       <th style="width:36;"></th>
-                     </tr>
-           </thead>
+<section>
+ <p>Developpements personnels</p>
+ <ul>
+  {foreach from=$listDevperso item=foo}
+  <li>{$foo}</li>
+  {/foreach}
+ </ul>
+</section>
 
-      </table>
-        <tbody>
-          <tr>
-            <td colspan="3">
-              <div style="height:100px; overflow:auto; border-top:solid 1px black; border-bottom:solid 1px black;">
-                <table cellspacing="0" cellpadding="0" style="color:midnightblue; font-family:verdana; font-size:36; text-align:center;">
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                  <tr><td>donnée 1</td>
-                </table>
-              </div>
-            </td>
-          </tr>
-        </tbody>
+<section>
+ <p>Source</p>
+ <ul>
+  {foreach from=$listSource item=foo}
+  <li>{$foo}</li>
+  {/foreach}
+ </ul>
+</section>
 
-          <table cellspacing="0" cellpadding="0"; font-family:verdana; font-size:48;">
-                   <thead>
-                           <tr>
-                               <th style="width:240; color:DarkCyan" >Source</th>
-                               <th style="width:36;"></th>
-                             </tr>
-                   </thead>
+<section>
+ <p>Auteurs</p>
+ <ul>
+  {foreach from=$listAuthors item=foo}
+  <li>{$foo}</li>
+  {/foreach}
+ </ul>
+</section>
 
-              </table>
-                   <tbody>
-                        <tr>
-                          <td colspan="3">
-                            <div style="height:100px; overflow:auto; border-top:solid 1px black; border-bottom:solid 1px black;">
-                              <table cellspacing="0" cellpadding="0" style="color:midnightblue; font-family:verdana; font-size:36; text-align:center;">
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                                <tr><td>donnée 1</td>
-                              </table>
-                            </div>
-                          </td>
-                        </tr>
-                      </tbody>
 
-</main>
+<section>
+ <p>Bibliographie</p>
+ <ul>
+  {foreach from=$listBibliographie item=foo}
+  <li>{$foo}</li>
+  {/foreach}
+ </ul>
+</section>
+
+
+<section>
+ <p>Webographie</p>
+ <ul>
+  {foreach from=$listWebographie item=foo}
+  <li>{$foo}</li>
+  {/foreach}
+ </ul>
+</section>
+
 {/block}
