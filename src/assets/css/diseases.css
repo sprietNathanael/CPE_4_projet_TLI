@@ -1,0 +1,25 @@
+table
+{
+    width: 100%;
+    border-spacing: 0px;
+    padding: 0 20%;
+}
+
+td, th
+{
+    text-align: left;
+    padding: 3px 0px 3px 5px;
+}
+
+thead{
+    background-color: #3172f5b0;
+    color: #FFFFFF;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #5286ef4f;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ff980029;
+}
