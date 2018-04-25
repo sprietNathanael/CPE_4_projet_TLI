@@ -8,7 +8,7 @@
 
 class ConnectionBd
 {
-    function getConnection()
+    public function getConnection()
     {
         try {
             $user = 'root';
@@ -24,3 +24,5 @@ class ConnectionBd
         }
     }
 }
+
+

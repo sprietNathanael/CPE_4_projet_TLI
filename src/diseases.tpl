@@ -1,17 +1,19 @@
-{extends file="layout.tpl"}
+{extends file="assets/layouts/layout.tpl"}
 {block name=title}Recherche{/block}
 {block name=content}
 
-<form id="search_form" action="search" method="post">
-    <p>Rechercher une pathologie</p>
-    <p>
-        <label for="name">Nom :</label>
-        <input type="text" name="name" id="search_name_input">
-    </p>
-    <p>
-        <button type="submit">Chercher</button>
-    </p>
-</form>
+<aside>
+    <form id="search_form" action="search" method="post">
+        <p>Rechercher une pathologie</p>
+        <p>
+            <label for="name">Nom :</label>
+            <input type="text" name="name" id="search_name_input">
+        </p>
+        <p>
+            <button type="submit">Chercher</button>
+        </p>
+    </form>
+</aside>
 <main>
     <table>
         <thead>
@@ -32,4 +34,4 @@
         </tbody>
     </table>
 </main>
-
+{/block}
