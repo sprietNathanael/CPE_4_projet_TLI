@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: "Calibri", "Verdana", "Arial",sans-serif;
 }
 
 .grid_wrapper {
@@ -30,6 +31,7 @@ body {
 #titleBar > h1 {
   grid-column: 2;
   text-align: center;
+  color: #FFFFFF;
 }
 
 .grid_one {
@@ -51,6 +53,17 @@ body {
   border-left: 2px solid #cecece;
   border-right: 2px solid #cecece;
 }
+
+.siteTitle {
+  grid-column: 1;
+  font-size: 4em;
+  font-family: "Times New Roman", time, serif;
+  padding-left: 2%;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+}
+
 nav {
   position: absolute;
   bottom: 0px;

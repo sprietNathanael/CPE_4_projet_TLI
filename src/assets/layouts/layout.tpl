@@ -9,6 +9,7 @@
 </head>
 <body>
     <div id="titleBar" class="grid_wrapper">
+        <div class="siteTitle">Pikouz</div>
         <h1>{block name=title}Titre par defaut{/block}</h1>
         <nav>
             <ul>
