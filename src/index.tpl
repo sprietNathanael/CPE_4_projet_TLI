@@ -1,4 +1,4 @@
-{extends file="layout.tpl"}
+{extends file="assets/layouts/layout.tpl"}
 {block name=title}Accueil{/block}
 {block name=content}
 

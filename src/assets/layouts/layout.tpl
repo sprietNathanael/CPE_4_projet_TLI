@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<<<<<<< Updated upstream:src/layout.tpl
     <link rel="stylesheet" href="style.css">
     <title>Pikouz</title>
+=======
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Accu</title>
+>>>>>>> Stashed changes:src/assets/layouts/layout.tpl
 </head>
 <body>
     <div id="titleBar" class="grid_wrapper">
