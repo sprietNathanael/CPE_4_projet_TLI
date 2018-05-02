@@ -15,7 +15,7 @@ class PathoDal
         $connClass = new ConnectionBd();
         $conn = $connClass->getConnection();
 
-        $query = $conn->query('SELECT mer, type, "desc" FROM Patho');
+        $query = $conn->query("SELECT mer, type, `desc` FROM Patho");
         return ($query->fetchAll());
     }
 
