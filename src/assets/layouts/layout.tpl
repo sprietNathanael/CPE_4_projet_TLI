@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="impression.css" media="print">
+    <link rel="stylesheet" href="assets/css/impression.css" media="print">
     {if isset($stylesheets)}
         {foreach from=$stylesheets item=style}
             <link rel="stylesheet" href=assets/css/{$style}>
