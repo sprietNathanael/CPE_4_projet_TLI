@@ -18,9 +18,63 @@
     <table id="diseasesTable">
         <thead>
             <tr>
-                <th>Pathologie</th>
-                <th>Type</th>
-                <th>Méridien</th>
+                <th>
+                    <div class="tableHeaderContent">
+                        <p>Pathologie</p>
+                        <div class="sortControls">
+                            <button id="sortUp_patho" class="sortButton sortUpButton" onclick="sortTable(sort,'nameElement')">
+                                <img
+                                    src="assets/icons/sort-alpha-up.svg"
+                                    alt="sort alpha up"
+                                    height="100px"/>
+                            </button>
+                            <button id="sortDown_patho" class="sortButton sortDownButton" onclick="sortTable(sortreverse,'nameElement')">
+                                <img
+                                    src="assets/icons/sort-alpha-down.svg"
+                                    alt="sort alpha down"
+                                    height="100px"/>
+                            </button>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="tableHeaderContent">
+                        <p>Type</p>
+                        <div class="sortControls">
+                            <button id="sortUp_type" class="sortButton sortUpButton" onclick="sortTable(sort,'typeElement')">
+                                <img
+                                    src="assets/icons/sort-alpha-up.svg"
+                                    alt="sort alpha up"
+                                    height="100px"/>
+                            </button>
+                            <button id="sortDown_type" class="sortButton sortDownButton" onclick="sortTable(sortreverse,'typeElement')">
+                                <img
+                                    src="assets/icons/sort-alpha-down.svg"
+                                    alt="sort alpha down"
+                                    height="100px"/>
+                            </button>
+                        </div>
+                    </div>
+                </th>
+                <th>
+                    <div class="tableHeaderContent">
+                        <p>Méridien</p>
+                        <div class="sortControls">
+                            <button id="sortUp_meridian" class="sortButton sortUpButton" onclick="sortTable(sort,'meridianElement')">
+                                <img
+                                    src="assets/icons/sort-alpha-up.svg"
+                                    alt="sort alpha up"
+                                    height="100px"/>
+                            </button>
+                            <button id="sortDown_meridian" class="sortButton sortDownButton" onclick="sortTable(sortreverse,'meridianElement')">
+                                <img
+                                    src="assets/icons/sort-alpha-down.svg"
+                                    alt="sort alpha down"
+                                    height="100px"/>
+                            </button>
+                        </div>
+                    </div>
+                </th>
             </tr>
         </thead>
         <tbody id="diseasesTable_content">

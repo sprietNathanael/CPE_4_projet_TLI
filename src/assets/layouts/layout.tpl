@@ -66,9 +66,11 @@
             }
         });
     </script>
-    {foreach from=$scripts item=script}
-        <script src="assets/js/{$script}"></script>
-    {/foreach}
+    {if isset($scripts)}
+        {foreach from=$scripts item=script}
+            <script src="assets/js/{$script}"></script>
+        {/foreach}
+    {/if}
 
 </body>
 </html>
