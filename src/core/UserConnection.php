@@ -1,5 +1,7 @@
 <?php
 
+include "UsersDal.php";
+
 class UserConnection
 {
     private $login = "user";
@@ -9,11 +11,18 @@ class UserConnection
     {
         $connectionOk = false;
 
-        //@TODO requête en base pour match login et passwd enregistré
-        if ($login === $this->login && $passWord === $this->password){
-            $_SESSION['login'] = $login;
-            $_SESSION['name'] = 'nameEnBase';
+        //Vérifie si une session est déjà initialisée
+        if (isset($_SESSION['login'])){
             $connectionOk = true;
+        }
+        //Si ce n'est pas le cas, on fait un appel en BD pour vérifier l'identité de l'utilisateur qui souhaite se connecter
+        if (!$connectionOk){
+            $connection = new UsersDal();
+            if($connection->connection($login, $passWord)){
+                $_SESSION['login'] = $login;
+                $_SESSION['name'] = 'nameEnBase';
+                $connectionOk = true;
+            }
         }
 
         return $connectionOk;
@@ -35,7 +44,6 @@ class UserConnection
      */
     public function isLogIn()
     {
-        return false;
-//        return isset($_SESSION['login']) && isset($_SESSION['name']);
+        return $this->logIn("etidudur", "1234");
     }
 }

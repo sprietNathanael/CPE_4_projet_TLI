@@ -26,7 +26,7 @@ class UsersDal
 
         $password = md5((md5($password) . $user['idU']));
 
-        return ($passwordToCompare == $password);
+        return ($passwordToCompare === $password);
     }
 
     public function getOneByUsername($username)

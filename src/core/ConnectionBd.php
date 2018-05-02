@@ -11,9 +11,7 @@ class ConnectionBd
     public function getConnection()
     {
         try {
-            $user = 'root';
-            $pass = '';
-            $conn = new PDO('mysql:host=localhost;dbname=acu', 'root', '', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+            $conn = new PDO('mysql:host=localhost;dbname=acu', 'root', 'root');
             // set the PDO error mode to exception
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conn;
