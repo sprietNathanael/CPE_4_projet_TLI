@@ -1,3 +1,22 @@
+console.log(diseases);
+generateDiseasesTable(diseases);
+
+function generateDiseasesTable(diseasesToDisplay)
+{
+    document.getElementById("diseasesTable_content").innerHTML = "";
+    res = "";
+    for(let i = 0; i < diseasesToDisplay.length; i++)
+    {
+        res += '\
+        <tr>\
+        <td class="nameElement">'+diseasesToDisplay[i].name+'</td>\
+        <td class="typeElement">'+diseasesToDisplay[i].type+'</td>\
+        <td class="meridianElement">'+diseasesToDisplay[i].meridian+'</td>\
+        </tr>'
+    }
+    document.getElementById("diseasesTable_content").innerHTML = res;
+}
+
 function sortTable(sorting, target)
 {
     var table, rows, switching, i, x, y, shouldSwitch;
