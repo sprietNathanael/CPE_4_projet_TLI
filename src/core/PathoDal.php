@@ -16,7 +16,7 @@ class PathoDal
         $conn = $connClass->getConnection();
 
         $query = $conn->query('SELECT * FROM Patho');
-        return ($query->fetch());
+        return ($query->fetchAll());
     }
 
    // public function getList()

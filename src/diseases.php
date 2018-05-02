@@ -1,4 +1,6 @@
 <?php
+require "../lib/smarty/Smarty.class.php"; // On inclut la classe Smarty
+include "./core/PathoDal.php";
 
 /**
  * Represents a disease
@@ -20,6 +22,16 @@ class Disease
     }
 }
 
+$pathoDal = new PathoDal();
+$pathos = $pathoDal->getAll();
+$diseases = array();
+foreach ($pathos as $patho)
+{
+    $dis = new Disease($patho["desc"], $patho["type"], $patho["mer"]);
+    array_push($diseases, $dis);
+}
+
+/*
 $diseases = array(
     new Disease("méridien du poumon externe", "me", "Yin Qiao Mai"),
     new Disease("méridien du poumon interne", "mi", "Yin Wei Mai"),
@@ -47,6 +59,7 @@ $diseases = array(
     new Disease("fu estomac plein et chaud", "tfpc", "Estomac"),
     new Disease("fu estomac vide et froid", "tfvf", "Estomac")
 );
+*/
 
 require "layout.php";
 
