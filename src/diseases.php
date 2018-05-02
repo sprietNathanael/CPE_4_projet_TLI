@@ -1,6 +1,7 @@
 <?php
 //require "../lib/smarty/Smarty.class.php"; // On inclut la classe Smarty
 include "./core/PathoDal.php";
+require "layout.php";
 
 /**
  * Represents a disease
@@ -60,8 +61,6 @@ $diseases = array(
     new Disease("fu estomac vide et froid", "tfvf", "Estomac")
 );
 */
-
-require "layout.php";
 
 $smartyTemplate->assign('diseases', $diseases);
 $smartyTemplate->assign('currentPage', "pathologies");
