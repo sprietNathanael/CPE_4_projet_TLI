@@ -54,4 +54,5 @@ $smarty = new Smarty();
 $smarty->assign('diseases', $diseases);
 $smarty->assign('currentPage', "pathologies");
 $smarty->assign('stylesheets', ["diseases.css"]);
+$smarty->assign('scripts', ["diseases.js"]);
 $smarty->display("diseases.tpl");

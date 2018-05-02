@@ -15,7 +15,7 @@
     </form>
 </aside>
 <main>
-    <table>
+    <table id="diseasesTable">
         <thead>
             <tr>
                 <th>Pathologie</th>
@@ -23,12 +23,12 @@
                 <th>Méridien</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="diseasesTable_content">
             {foreach from=$diseases item=disease}
             <tr>
-                <td>{$disease->name}</td>
-                <td>{$disease->type}</td>
-                <td>{$disease->meridian}</td>
+                <td class="nameElement">{$disease->name}</td>
+                <td class="typeElement">{$disease->type}</td>
+                <td class="meridianElement">{$disease->meridian}</td>
             </tr>
             {/foreach}
         </tbody>
