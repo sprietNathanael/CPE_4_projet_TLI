@@ -35,7 +35,7 @@ class UserConnection
      */
     public function isLogIn()
     {
-        return true;
+        return false;
 //        return isset($_SESSION['login']) && isset($_SESSION['name']);
     }
 }

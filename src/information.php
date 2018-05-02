@@ -1,6 +1,6 @@
 <?php
-require "../lib/smarty/Smarty.class.php"; // On inclut la classe Smarty
 
+require "layout.php";
 
 $devperso = array('donnée1','donnée2','donnée3');
 $source = array('donnée4','donnée5','donnée6');
@@ -10,11 +10,10 @@ $webographie = array('donnée4','donnée5','donnée6');
 
 
 
-$smarty = new Smarty();
-$smarty->assign('listDevperso', $devperso);
-$smarty->assign('listSource', $source);
-$smarty->assign('listAuthors', $authors);
-$smarty->assign('listBibliographie', $bibliographie);
-$smarty->assign('listWebographie', $webographie);
-$smarty->assign('currentPage', "informations");
-$smarty->display("information.tpl");
+$smartyTemplate->assign('listDevperso', $devperso);
+$smartyTemplate->assign('listSource', $source);
+$smartyTemplate->assign('listAuthors', $authors);
+$smartyTemplate->assign('listBibliographie', $bibliographie);
+$smartyTemplate->assign('listWebographie', $webographie);
+$smartyTemplate->assign('currentPage', "informations");
+$smartyTemplate->display("information.tpl");

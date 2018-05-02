@@ -1,5 +1,4 @@
 <?php
-require "../lib/smarty/Smarty.class.php"; // On inclut la classe Smarty
 
 /**
  * Represents a disease
