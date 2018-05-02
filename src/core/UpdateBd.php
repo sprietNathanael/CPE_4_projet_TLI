@@ -6,6 +6,8 @@
  * Time: 15:11
  */
 
+include "ConnectionBd.php";
+
 updateBd();
 
 function updateBd()
@@ -15,7 +17,7 @@ function updateBd()
         $conn = $connectionClass->getConnection();
 
         try {
-            $req = 'SELECT version FROM Parameters';
+            $req = 'SELECT version FROM parameters';
             $parametersPDO = $conn->query($req);
             $parameters = $parametersPDO->fetch();
             $version = $parameters['version'];
@@ -30,7 +32,7 @@ function updateBd()
                 )';
             //exec because no results
             $conn->exec($req);
-            $req = 'INSERT INTO Parameters(Version) VALUES ("01.00")';
+            $req = 'INSERT INTO parameters(Version) VALUES ("01.00")';
             $conn->exec($req);
             $i = 1;
         }
@@ -41,7 +43,7 @@ function updateBd()
 
 
         // Update version fin
-        $conn->exec("UPDATE Parameters SET Version='".$version."'");
+        $conn->exec("UPDATE parameters SET Version='".$version."'");
         $conn = null;
 
     } catch (PDOException $e) {

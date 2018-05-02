@@ -78,14 +78,10 @@
             </tr>
         </thead>
         <tbody id="diseasesTable_content">
-            {foreach from=$diseases item=disease}
-            <tr>
-                <td class="nameElement">{$disease->name}</td>
-                <td class="typeElement">{$disease->type}</td>
-                <td class="meridianElement">{$disease->meridian}</td>
-            </tr>
-            {/foreach}
         </tbody>
     </table>
+    <script>
+        var diseases = {$diseases|json_encode};
+    </script>
 </main>
 {/block}
