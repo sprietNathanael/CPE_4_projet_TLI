@@ -80,6 +80,16 @@
         <tbody id="diseasesTable_content">
         </tbody>
     </table>
+    <div id="pageManager">
+        <div>
+            Résultats par page : <select id="resultsPerPageSelector" onchange="refreshPagesNumber()">
+                <option value="10">10</option>
+                <option value="20" selected>20</option>
+                <option value="25">25</option>
+            </select>
+        </div>
+        <div id="pages"></div>
+    </div>
     <script>
         var diseases = {$diseases|json_encode};
     </script>

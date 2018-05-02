@@ -1,20 +1,68 @@
-console.log(diseases);
-generateDiseasesTable(diseases);
+var diseasesToDisplay = diseases;
+var resultsPerPage = parseInt(document.getElementById("resultsPerPageSelector").value);
+var currentPage = 0;
+var pagesNumber;
+generatePagesSelection();
+generateDiseasesTablePage(0);
 
-function generateDiseasesTable(diseasesToDisplay)
+function refreshPagesNumber()
 {
-    document.getElementById("diseasesTable_content").innerHTML = "";
-    res = "";
-    for(let i = 0; i < diseasesToDisplay.length; i++)
+    resultsPerPage = parseInt(document.getElementById("resultsPerPageSelector").value);
+    generatePagesSelection();
+    currentPage = 0;
+    generateDiseasesTablePage(0);
+
+}
+
+function generatePagesSelection()
+{
+    pagesNumber = Math.ceil(diseasesToDisplay.length/resultsPerPage);
+    document.getElementById("pages").innerHTML = "";
+    html = "";
+    html += "<button id='buttonPage-previous' class='buttonPage' onclick='preivousPage()'><</button>";
+    for(let i = 1; i <= pagesNumber; i++)
     {
-        res += '\
-        <tr>\
-        <td class="nameElement">'+diseasesToDisplay[i].name+'</td>\
-        <td class="typeElement">'+diseasesToDisplay[i].type+'</td>\
-        <td class="meridianElement">'+diseasesToDisplay[i].meridian+'</td>\
-        </tr>'
+        html += "<button id='buttonPage-"+(i-1)+"' class='buttonPage' onclick='generateDiseasesTablePage("+(i-1)+")'>"+i+"</button>";
     }
-    document.getElementById("diseasesTable_content").innerHTML = res;
+    html += "<button id='buttonPage-next' class='buttonPage' onclick='nextPage()'>></button>";
+    document.getElementById("pages").innerHTML = html;
+}
+
+function preivousPage()
+{
+    generateDiseasesTablePage(currentPage-1);
+}
+
+function nextPage()
+{
+    generateDiseasesTablePage(currentPage+1);
+}
+
+function generateDiseasesTablePage(page)
+{
+    if(page >= 0 && page < pagesNumber)
+    {
+        document.getElementById("buttonPage-"+currentPage).classList.remove("currentPage");
+        currentPage = page;
+        document.getElementById("buttonPage-"+currentPage).classList.add("currentPage");
+        document.getElementById("diseasesTable_content").innerHTML = "";
+        res = "";
+        start = page*resultsPerPage;
+        end = start+resultsPerPage;
+        for(let i = start; i < end; i++)
+        {
+            if(diseasesToDisplay[i] !== undefined)
+            {
+                res += '\
+                <tr>\
+                <td class="nameElement">'+diseasesToDisplay[i].name+'</td>\
+                <td class="typeElement">'+diseasesToDisplay[i].type+'</td>\
+                <td class="meridianElement">'+diseasesToDisplay[i].meridian+'</td>\
+                </tr>';
+            }
+        }
+        document.getElementById("diseasesTable_content").innerHTML = res;
+    }
 }
 
 function sortTable(sorting, target)
