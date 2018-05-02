@@ -49,10 +49,10 @@ $diseases = array(
     new Disease("fu estomac vide et froid", "tfvf", "Estomac")
 );
 
-// echo $diseases;
-$smarty = new Smarty();
-$smarty->assign('diseases', $diseases);
-$smarty->assign('currentPage', "pathologies");
-$smarty->assign('stylesheets', ["diseases.css"]);
-$smarty->assign('scripts', ["diseases.js"]);
-$smarty->display("diseases.tpl");
+require "layout.php";
+
+$smartyTemplate->assign('diseases', $diseases);
+$smartyTemplate->assign('currentPage', "pathologies");
+$smartyTemplate->assign('stylesheets', ["diseases.css"]);
+$smartyTemplate->assign('scripts', ["diseases.js"]);
+$smartyTemplate->display("diseases.tpl");
