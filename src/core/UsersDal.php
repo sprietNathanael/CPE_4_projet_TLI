@@ -34,7 +34,7 @@ class UsersDal
         $connClass = new ConnectionBd();
         $conn = $connClass->getConnection();
 
-        $query = $conn->prepare('SELECT * FROM Users WHERE pseudo = ?');
+        $query = $conn->prepare('SELECT * FROM users WHERE pseudo = ?');
         $query->execute(array($username));
         return ($query->fetch());
     }
@@ -71,7 +71,7 @@ class UsersDal
             $passMD5 = md5($passMD5 . ($lastIdU + 1));
 
             // Insertion de l'user
-            $insert = $conn->prepare("INSERT INTO Users(pseudo, password, nom, prenom)
+            $insert = $conn->prepare("INSERT INTO users(pseudo, password, nom, prenom)
                                VALUES(?, ?, ?, ?)");
             $insert->execute(array($username, $passMD5, $nom, $prenom));
             $conn->commit();
@@ -89,7 +89,7 @@ class UsersDal
         $connClass = new ConnectionBd();
         $conn = $connClass->getConnection();
 
-        $query = $conn->prepare('DELETE FROM Users WHERE idU = ?');
+        $query = $conn->prepare('DELETE FROM users WHERE idU = ?');
         $query->execute(array($idU));
     }
 
