@@ -6,6 +6,8 @@
  * Time: 15:11
  */
 
+include "ConnectionBd.php";
+
 updateBd();
 
 function updateBd()
