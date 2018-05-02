@@ -1,5 +1,5 @@
 <?php
-require "../lib/smarty/Smarty.class.php"; // On inclut la classe Smarty
+//require "../lib/smarty/Smarty.class.php"; // On inclut la classe Smarty
 include "./core/PathoDal.php";
 
 /**
