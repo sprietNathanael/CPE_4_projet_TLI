@@ -88,3 +88,12 @@ function sortreverse(target)
         if(a[target].toLowerCase() < b[target].toLowerCase()) return 1;
     });
 }
+
+function searchInName()
+{
+    var search = document.getElementById("search_name_input").value;
+    diseasesToDisplay = [];
+    diseasesToDisplay = diseases.filter(disease => disease.name.toLowerCase().includes(search.toLowerCase()));
+    refreshPagesNumber();
+
+}

@@ -10,7 +10,7 @@
             <input type="text" name="name" id="search_name_input">
         </p>
         <p>
-            <button type="submit">Chercher</button>
+            <button type="button" onclick="searchInName()">Chercher</button>
         </p>
     </form>
 </aside>
