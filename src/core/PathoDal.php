@@ -6,7 +6,7 @@
  * Time: 11:15
  */
 
-include "ConnectionBd.php";
+//include "ConnectionBd.php";
 
 class PathoDal
 {
