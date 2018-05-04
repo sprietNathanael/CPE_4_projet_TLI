@@ -6,7 +6,7 @@
  * Time: 15:11
  */
 
-include "ConnectionBd.php";
+require_once "ConnectionBd.php";
 
 updateBd();
 
