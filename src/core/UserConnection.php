@@ -29,6 +29,21 @@ class UserConnection
     }
 
     /**
+     * Add new user
+     */
+    public function signIn(String $login, String $passWord, String $name, String $firstName)
+    {
+        $ret = false;
+
+        if (!empty($login) && !empty($name)){
+            $connectionDb = new UsersDal();
+            $ret = $connectionDb->add($login, $passWord, $name, $firstName);
+        }
+
+        return $ret;
+    }
+
+    /**
      * Log out the user
      */
     public function logOut()
