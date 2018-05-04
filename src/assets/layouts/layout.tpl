@@ -24,8 +24,10 @@
                     <a href="search.php"><li {if isset($currentPage) && $currentPage == "recherche"}class="currentPage"{/if}>Recherche</li></a>
                 {/if}
                 <a href="information.php"><li {if isset($currentPage) && $currentPage == "informations"}class="currentPage"{/if}>Informations</li></a>
-                <a href="diseases.php"><li {if isset($currentPage) && $currentPage == "pathologies"}class="currentPage"{/if}>Pathologies</li></a>                <a href="diseases.php"><li {if isset($currentPage) && $currentPage == "pathologies"}class="currentPage"{/if}>Pathologies</li></a>
-                <a href="logout.php"><li>Déconnexion</li></a>
+                <a href="diseases.php"><li {if isset($currentPage) && $currentPage == "pathologies"}class="currentPage"{/if}>Pathologies</li></a>
+                {if $loggedIn}
+                    <a href="logout.php"><li>Déconnexion</li></a>
+                {/if}
             </ul>
         </nav>
     </div>

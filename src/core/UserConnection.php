@@ -4,9 +4,9 @@ require_once "UsersDal.php";
 
 class UserConnection
 {
-    private $login = "user";
-    private $password = "1234";
-
+    /**
+     * Test if the user exists
+     */
     public function logIn(String $login, String $passWord)
     {
         $connectionOk = false;
@@ -38,12 +38,13 @@ class UserConnection
 
     /**
      * Tests if a user is logged into the site
-     * @TODO A remplacer une fois la connexion avec le formulaire mise en place
      *
+     * @param String $id
+     * @param String $password
      * @return bool
      */
     public function isLogIn()
     {
-        return $this->logIn("etidudur", "1234");
+        return (isset($_SESSION['login']));
     }
 }
