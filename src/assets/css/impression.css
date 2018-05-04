@@ -1,4 +1,8 @@
 body {
-    background: white;
+    background:white;
+    font-family:Serif;
     font-size:0.85em;
 }
+
+#navigation {display: none;}
+

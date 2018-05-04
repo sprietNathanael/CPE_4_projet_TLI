@@ -1,6 +1,6 @@
 <?php
 
-include "UsersDal.php";
+require_once "UsersDal.php";
 
 class UserConnection
 {

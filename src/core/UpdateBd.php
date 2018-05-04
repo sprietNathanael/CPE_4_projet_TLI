@@ -6,7 +6,7 @@
  * Time: 15:11
  */
 
-include "ConnectionBd.php";
+require_once "ConnectionBd.php";
 
 updateBd();
 
@@ -15,6 +15,7 @@ function updateBd()
     try {
         $connectionClass = new ConnectionBd();
         $conn = $connectionClass->getConnection();
+
 
         try {
             $req = 'SELECT version FROM parameters';
@@ -34,7 +35,7 @@ function updateBd()
             $conn->exec($req);
             $req = 'INSERT INTO parameters(Version) VALUES ("01.00")';
             $conn->exec($req);
-            $i = 1;
+            $version = "01.00";
         }
 
         if ($version = '01.00') {

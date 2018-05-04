@@ -6,7 +6,7 @@
  * Time: 16:23
  */
 
-include "ConnectionBd.php";
+require_once "ConnectionBd.php";
 
 class UsersDal
 {
