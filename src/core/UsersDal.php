@@ -13,6 +13,7 @@ class UsersDal
     /**
      * @param $username
      * @param $password
+     *
      * @return true if user found
      *
      */
@@ -24,9 +25,13 @@ class UsersDal
         if ($passwordToCompare == null)
             return false;
 
-        $password = md5((md5($password) . $user['idU']));
+        $passwordCalcule = $this->sha3AndSalt($username, $password);
+        return ($passwordToCompare === $passwordCalcule);
+    }
 
-        return ($passwordToCompare === $password);
+    private function sha3AndSalt($username, $password)
+    {
+        return hash("sha256", (hash("sha256", $password) . $username));
     }
 
     public function getOneByUsername($username)
@@ -56,19 +61,10 @@ class UsersDal
         if ($userExist['idU'] != null)
             return false;
 
-        $passMD5 = md5($password);
-
         try {
             $conn->beginTransaction();
-            // récupération lastID
-            $queryPdo = $conn->query("SELECT idU FROM `users` ORDER BY idU desc LIMIT 1");
-            $user = $queryPdo->fetch();
-            $lastIdU = $user["idU"];
-            if ($lastIdU == null)
-                $lastIdU = 0;
-
             // salage du MD5
-            $passMD5 = md5($passMD5 . ($lastIdU + 1));
+            $passMD5 = $this->sha3AndSalt($username, $password);
 
             // Insertion de l'user
             $insert = $conn->prepare("INSERT INTO users(pseudo, password, nom, prenom)
@@ -94,14 +90,15 @@ class UsersDal
     }
 
 }
-
-//$usersDal = new UsersDal();
-//$add = $usersDal->add('test', 'test2', '', '');
-//var_dump($add);
-//$co = $usersDal->connection('test','test2');
-//var_dump($co);
-//$add = $usersDal->add('test2', 'test3', '', '');
-//var_dump($add);
-//$co = $usersDal->connection('test2','test3');
-//var_dump($co);
-//$usersDal->delete(1);
+/*
+$usersDal = new UsersDal();
+$add = $usersDal->add('test', 'test2', '', '');
+var_dump($add);
+$co = $usersDal->connection('test', 'test2');
+var_dump($co);
+$add = $usersDal->add('test2', 'test3', '', '');
+var_dump($add);
+$co = $usersDal->connection('test2', 'test3');
+var_dump($co);
+$usersDal->delete(1);
+*/
