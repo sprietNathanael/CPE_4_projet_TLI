@@ -58,8 +58,8 @@ function Update_01_01($co)
 {
     $req = 'Create table IF NOT EXISTS users (
                   idU Int Not Null Auto_Increment,
-                  pseudo Varchar(100),
-                  password Varchar(256),
+                  pseudo Varchar(100) NOT NULL,
+                  password Varchar(256) NOT NULL,
                   nom Varchar(100) NULL,
                   prenom Varchar(100) NULL,
                   PRIMARY KEY (idU)
