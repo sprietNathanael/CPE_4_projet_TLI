@@ -1,6 +1,6 @@
 <?php
 //require "../lib/smarty/Smarty.class.php"; // On inclut la classe Smarty
-include "./core/PathoDal.php";
+include "./repository/PathoDal.php";
 require "layout.php";
 
 /**

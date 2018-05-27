@@ -1,7 +1,7 @@
 <?php
 
 //require_once "layout.php";
-require_once  "./core/PathoDal.php";
+require_once "./repository/PathoDal.php";
 
 //$smartyTemplate->assign('currentPage', "accueil");
 //$smartyTemplate->display("search.tpl");
