@@ -34,7 +34,7 @@ class PathoDal
         $query->execute(array($meridien, $pathologie, $caracteristique));
         return ($query->fetchAll());
     }
-    
+
 }
 /*
 $pathoDal = new PathoDal();
