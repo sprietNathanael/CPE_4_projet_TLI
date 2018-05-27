@@ -2,26 +2,11 @@
 //require "../lib/smarty/Smarty.class.php"; // On inclut la classe Smarty
 include "./repository/PathoDal.php";
 require "layout.php";
-
+require_once "./model/Disease.php";
 /**
  * Represents a disease
  */
-class Disease
-{
-    public $name;
-    public $type;
-    public $meridian;
 
-    /**
-     * Construct
-     */
-    public function __construct($name, $type, $meridian)
-    {
-        $this->name = $name;
-        $this->type = $type;
-        $this->meridian = $meridian;
-    }
-}
 
 $pathoDal = new PathoDal();
 $pathos = $pathoDal->getAll();
