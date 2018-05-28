@@ -3,5 +3,5 @@
 	$i=0;
 	$i++;
 	$cfg['Servers'][$i]['auth_type'] = 'cookie';
-	$cfg['Servers'][$i]['host'] = 'localhost';
+	$cfg['Servers'][$i]['host'] = '172.18.0.1';
 ?>
