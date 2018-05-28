@@ -1,0 +1,28 @@
+# Utilisation d'une image légère de debian 9 comme image de base
+FROM debian:stretch-slim
+
+# Auteurs de l'image
+MAINTAINER Damien-Remy
+
+# Mise à jour des dépôts et installation d'apache2, php7 et phpmyadmin
+RUN apt-get update && apt-get install -y apache2 php7.0 php7.0-mysql wget
+
+# Donner un nom au serveur
+RUN echo "ServerName PhpMyAdmin" >> /etc/apache2/apache2.conf
+
+# Téléchargement et installation de phpmyadmin
+RUN cd /var/www/html; wget https://files.phpmyadmin.net/phpMyAdmin/4.8.1/phpMyAdmin-4.8.1-all-languages.tar.gz
+RUN tar xzf phpMyAdmin-4.8.1-all-languages.tar.gz && rm phpMyAdmin-4.8.1-all-languages.tar.gz
+RUN mv phpMyAdmin-4.8.1-all-languages phpmyadmin
+
+# Modification du fichier de configuration pour se connecter sur le container mysql
+RUN cd /var/www/html/phpmyadmin && wget https://raw.githubusercontent.com/sprietNathanael/CPE_4_projet_TLI/master/ressource_cours/config.inc.php
+
+# Modification des droits sur le répertoire d'aapche
+RUN chown -R www-data:www-data /var/www/html
+
+# Exposition du port 8080 à la VM
+EXPOSE 8080
+
+# Lancement du service apache en tâche de fond
+CMD apachectl -D FOREGROUND
