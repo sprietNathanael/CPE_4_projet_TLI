@@ -8,6 +8,7 @@
 	</head>
 
 	<body>
-		<img src="src/assets/icons/404.jpg" alt="Photo-erreur-404" width="100%" height="100%" />
+		<?php $URL = "http://" . $_SERVER['HTTP_HOST'] . "/src/assets/icons/404.jpg"; ?>
+		<img src="<?php echo $URL; ?> " alt="Photo-erreur-404" width="100%" height="100%" />
 	</body>
 </html>
