@@ -19,14 +19,14 @@
         <h1>{block name=title}Titre par defaut{/block}</h1>
         <nav>
             <ul>
-                <a href="index.php"><li {if isset($currentPage) && $currentPage == "accueil"}class="currentPage"{/if}>Accueil</li></a>
+                <li {if isset($currentPage) && $currentPage == "accueil"}class="currentPage"{/if} onclick="changePage('index.php')" ><a href="index.php">Accueil</a></li>
                 {if $loggedIn}
-                    <a href="search.php"><li {if isset($currentPage) && $currentPage == "recherche"}class="currentPage"{/if}>Recherche</li></a>
+                   <li {if isset($currentPage) && $currentPage == "recherche"}class="currentPage"{/if} onclick="changePage('search.php')"><a href="search.php">Recherche</a></li>
                 {/if}
-                <a href="information.php"><li {if isset($currentPage) && $currentPage == "informations"}class="currentPage"{/if}>Informations</li></a>
-                <a href="allDiseases.php"><li {if isset($currentPage) && $currentPage == "pathologies"}class="currentPage"{/if}>Pathologies</li></a>
+                <li {if isset($currentPage) && $currentPage == "informations"}class="currentPage"{/if} onclick="changePage('information.php')"><a href="information.php">Informations</a></li>
+                <li {if isset($currentPage) && $currentPage == "pathologies"}class="currentPage"{/if} onclick="changePage('allDiseases.php')"><a href="allDiseases.php">Pathologies</a></li>
                 {if $loggedIn}
-                    <a href="logout.php"><li>Déconnexion</li></a>
+                    <li onclick="changePage('logout.php')"><a href="logout.php">Déconnexion</a></li>
                 {/if}
             </ul>
         </nav>

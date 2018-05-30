@@ -9,3 +9,8 @@ document.getElementById("content_grid").addEventListener('scroll',function(e)
         document.getElementById("titleBar").classList.add("bar_scrolled");
     }
 });
+
+function changePage(page)
+{
+    location.assign(page);
+}
