@@ -56,19 +56,7 @@
         </div>
         <div class="grid_three"></div>
     </div>
-    <script>
-        document.getElementById("content_grid").addEventListener('scroll',function(e)
-        {
-            if(this.scrollTop === 0)
-            {
-                document.getElementById("titleBar").classList.remove("bar_scrolled");
-            }
-            else
-            {
-                document.getElementById("titleBar").classList.add("bar_scrolled");
-            }
-        });
-    </script>
+    <script src="assets/js/layout.js"></script>
     {if isset($scripts)}
         {foreach from=$scripts item=script}
             <script src="assets/js/{$script}"></script>
