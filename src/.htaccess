@@ -8,5 +8,5 @@ ErrorDocument 404 /src/404.php
 # Redirection de la racine vers la page d'accueil
 RedirectMatch ^/$ /src/index.php
 
-# Redirection avec paramètres
-RewriteRule ^([a-z0-9]+)/([a-z0-9]+)$ /src/index.php?page=$1&param2=$2  [L]
+# Redirection vers la page index avec en parametre la page demandee
+RewriteRule ^([a-z0-9]+)$ /src/index.php?page=$1 [L]
