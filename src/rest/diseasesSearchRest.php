@@ -4,7 +4,7 @@
 require_once "../repository/PathoDal.php";
 
 //$smartyTemplate->assign('currentPage', "accueil");
-//$smartyTemplate->display("assets/layouts/search.tpl");
+//$smartyTemplate->display("assets/template/search.tpl");
 
 
 // Treatements on GET

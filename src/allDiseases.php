@@ -18,4 +18,4 @@ $smartyTemplate->assign('diseases', $diseases);
 $smartyTemplate->assign('currentPage', "pathologies");
 $smartyTemplate->assign('stylesheets', ["diseases.css"]);
 $smartyTemplate->assign('scripts', ["allDiseases.js", "diseases.js"]);
-$smartyTemplate->display("assets/layouts/allDiseases.tpl");
+$smartyTemplate->display("assets/template/allDiseases.tpl");

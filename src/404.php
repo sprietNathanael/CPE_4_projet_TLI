@@ -2,5 +2,5 @@
 
 require_once "layout.php";
 
-$smartyTemplate->display("assets/layouts/404.tpl");
+$smartyTemplate->display("assets/template/404.tpl");
 

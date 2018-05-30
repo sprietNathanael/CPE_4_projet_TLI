@@ -16,4 +16,4 @@ $smartyTemplate->assign('listAuthors', $authors);
 $smartyTemplate->assign('listBibliographie', $bibliographie);
 $smartyTemplate->assign('listWebographie', $webographie);
 $smartyTemplate->assign('currentPage', "informations");
-$smartyTemplate->display("assets/layouts/information.tpl");
+$smartyTemplate->display("assets/template/information.tpl");
