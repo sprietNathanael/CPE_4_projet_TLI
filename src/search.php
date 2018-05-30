@@ -1,4 +1,5 @@
 <?php
+
 require_once "layout.php";
 
 $smartyTemplate->assign('currentPage', "recherche");

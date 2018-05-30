@@ -1,5 +1,5 @@
 <?php
-require "../lib/smarty/Smarty.class.php"; // On inclut la classe Smarty
+require_once "../lib/smarty/Smarty.class.php"; // On inclut la classe Smarty
 
 $smarty = new Smarty();
 $smarty->assign('currentPage', "recherche");
