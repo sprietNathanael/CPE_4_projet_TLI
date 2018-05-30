@@ -27,4 +27,4 @@ if (isset($_POST["signIn"]) && isset($_POST["sign_username"]) && isset($_POST["s
 }
 
 $smartyTemplate->assign('currentPage', "accueil");
-$smartyTemplate->display("index.tpl");
+$smartyTemplate->display("assets/layouts/index.tpl");
