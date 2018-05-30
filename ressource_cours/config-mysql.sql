@@ -1,3 +1,11 @@
 CREATE USER 'admin' IDENTIFIED WITH mysql_native_password BY 'admin-mysql';
 GRANT ALL ON acu.* TO 'admin';
-GRANT ALL ON acu.* TO 'mysql';
+GRANT SELECT ON acu.keysympt TO mysql;
+GRANT SELECT ON acu.keywords TO mysql;
+GRANT SELECT ON acu.meridien TO mysql;
+GRANT SELECT ON acu.patho TO mysql;
+GRANT SELECT ON acu.symptome TO mysql;
+GRANT SELECT ON acu.symptpatho TO mysql;
+GRANT SELECT ON acu.keysympt TO mysql;
+GRANT INSERT, UPDATE ON acu.users TO mysql;
+GRANT INSERT, UPDATE ON acu.parameters TO mysql;
