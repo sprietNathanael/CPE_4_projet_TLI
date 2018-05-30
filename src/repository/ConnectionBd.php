@@ -12,7 +12,7 @@ class ConnectionBd
     {
         try {
             // set the PDO error mode to exception
-            $conn = new PDO('mysql:host=localhost;dbname=tli', 'root', 'admin', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+            $conn = new PDO('mysql:host=localhost;dbname=acu', 'root', 'root', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
             return $conn;
 
