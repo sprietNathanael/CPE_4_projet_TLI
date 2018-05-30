@@ -52,12 +52,12 @@ function generateDiseasesTablePage(page)
         {
             if(diseasesToDisplay[i] !== undefined)
             {
-                res += '\
+                res +="\
                 <tr>\
                 <td class="nameElement">'+diseasesToDisplay[i].name+'</td>\
                 <td class="typeElement">'+diseasesToDisplay[i].type+'</td>\
                 <td class="meridianElement">'+diseasesToDisplay[i].meridian+'</td>\
-                </tr>';
+                </tr>";
             }
         }
         document.getElementById("diseasesTable_content").innerHTML = res;
