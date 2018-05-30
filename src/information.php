@@ -1,6 +1,6 @@
 <?php
 
-require "layout.php";
+require_once "layout.php";
 
 $devperso = array('donnée1','donnée2','donnée3');
 $source = array('donnée4','donnée5','donnée6');
