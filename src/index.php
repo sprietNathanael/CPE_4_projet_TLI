@@ -2,6 +2,14 @@
 
 require_once "layout.php";
 
+
+//Redirections pour avoir qu'un seul point d'entrée
+if (isset($_GET["page"])){
+    $page = htmlentities($_GET['page']);
+    header("Location: http://" . $_SERVER['HTTP_HOST'] . "/src/" . $page . ".php");
+    exit();
+}
+
 /**
  * @TODO: Envoyer message de résultat
  */
