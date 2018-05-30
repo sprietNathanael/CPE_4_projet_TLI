@@ -19,25 +19,28 @@ class PathoDal
         return ($query->fetchAll());
     }
 
-    public function getList(String $meridien, String $pathologie, String $caracteristique)
+    public function getList(String $meridien, String $type, String $desc)
     {
         $connClass = new ConnectionBd();
+        var_dump($meridien);
+        var_dump($type);
+        var_dump($desc);
         $conn = $connClass->getConnection();
-        $req = "SELECT m.nom, type, `desc` 
-                FROM patho p
-                INNER JOIN meridien m ON p.mer=m.code
-                WHERE m.nom LIKE CONCAT('%', ?,'%')
-                  AND `desc` LIKE CONCAT('%', ?, '%')
-                  AND `desc` LIKE CONCAT('%', ? '%')";
+        $req = 'SELECT meridien.nom, patho.type, patho.desc
+        FROM patho
+        INNER JOIN meridien ON patho.mer=meridien.code
+        WHERE patho.mer LIKE CONCAT("%", ?, "%")
+        AND patho.type LIKE CONCAT("%", ?, "%")
+        AND patho.desc LIKE CONCAT("%", ?, "%")';
 
         $query = $conn->prepare($req);
-        $query->execute(array($meridien, $pathologie, $caracteristique));
+        $query->execute(array($meridien, $type, $desc));
         return ($query->fetchAll());
     }
 
 }
 /*
 $pathoDal = new PathoDal();
-$list = $pathoDal->getList("poumon","luo","vide");
-var_dump($list);
-*/
+$list = $pathoDal->getList("P","","zang");
+//$list = $pathoDal->getAll();
+var_dump($list);*/
