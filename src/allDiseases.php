@@ -17,5 +17,5 @@ foreach ($pathos as $patho)
 $smartyTemplate->assign('diseases', $diseases);
 $smartyTemplate->assign('currentPage', "pathologies");
 $smartyTemplate->assign('stylesheets', ["diseases.css"]);
-$smartyTemplate->assign('scripts', ["diseases.js", "allDiseases.js"]);
+$smartyTemplate->assign('scripts', ["allDiseases.js", "diseases.js"]);
 $smartyTemplate->display("allDiseases.tpl");
