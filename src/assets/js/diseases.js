@@ -39,6 +39,7 @@ function nextPage()
 
 function generateDiseasesTablePage(page)
 {
+    document.getElementById("diseasesTable_content").innerHTML = "";
     if(page >= 0 && page < pagesNumber)
     {
         document.getElementById("buttonPage-"+currentPage).classList.remove("currentPage");
@@ -52,12 +53,12 @@ function generateDiseasesTablePage(page)
         {
             if(diseasesToDisplay[i] !== undefined)
             {
-                res +="\
+                res += '\
                 <tr>\
                 <td class="nameElement">'+diseasesToDisplay[i].name+'</td>\
                 <td class="typeElement">'+diseasesToDisplay[i].type+'</td>\
                 <td class="meridianElement">'+diseasesToDisplay[i].meridian+'</td>\
-                </tr>";
+                </tr>';
             }
         }
         document.getElementById("diseasesTable_content").innerHTML = res;

@@ -7,11 +7,60 @@
         <h2>Recherche</h2>
         <p>
             <label for="meridien">Méridien :</label>
-            <input type="text" name="meridien" id="search_meridien_input">
+            <select id="search_meridien_input" name="meridien">
+                <option value="" default>--</option>
+                <option value="-QM">Yin Qiao Mai</option>
+                <option value="-WM">Yin Wei Mai</option>
+                <option value="+QM">Yang Qiao Mai</option>
+                <option value="+WM">Yang Wei Mai</option>
+                <option value="C">Coeur</option>
+                <option value="ChM">Chong Mai</option>
+                <option value="DaiM">Dai Mai</option>
+                <option value="DM">Du Mai</option>
+                <option value="E">Estomac</option>
+                <option value="F">Foie</option>
+                <option value="GI">Gros intestin</option>
+                <option value="IG">Intestin Grêle</option>
+                <option value="MC">Protecteur du coeur</option>
+                <option value="P">Poumon</option>
+                <option value="R">Rein</option>
+                <option value="RM">Ren Mai</option>
+                <option value="Rte">Rate Pancréas</option>
+                <option value="TR">Triple réchauffeur</option>
+                <option value="V">Vessie</option>
+                <option value="VB">Vésicule Biliaire</option>
+            </select>
         </p>
         <p>
             <label for="pathologie">Type :</label>
-            <input type="text" name="pathologie" id="search_type_input">
+            <select id="search_type_input" name="pathologie">
+                <option value="" default>--</option>
+                <option value="me">me</option>
+                <option value="mi">mi</option>
+                <option value="lp">lp</option>
+                <option value="lv">lv</option>
+                <option value="j">j</option>
+                <option value="tfp">tfp</option>
+                <option value="tfv">tfv</option>
+                <option value="tfc">tfc</option>
+                <option value="tff">tff</option>
+                <option value="tfpc">tfpc</option>
+                <option value="tfvf">tfvf</option>
+                <option value="l2p">l</option>
+                <option value="l2v">l</option>
+                <option value="tfv-">tfv</option>
+                <option value="tfv+">tfv</option>
+                <option value="tfvfs">tfvfs</option>
+                <option value="tfpcs">tfpcs</option>
+                <option value="tfvfm">tfvfm</option>
+                <option value="tfpcm">tfpcm</option>
+                <option value="tfvfi">tfvfi</option>
+                <option value="tfpci">tfpci</option>
+                <option value="mv">mv</option>
+                <option value="mvi">mvi</option>
+                <option value="mvp">mvp</option>
+                <option value="mva">mva</option>
+            </select>
         </p>
         <p>
             <label for="caracteristique">Pathologie :</label>

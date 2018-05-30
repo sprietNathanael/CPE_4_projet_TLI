@@ -8,6 +8,7 @@ function searchDisease()
 		contentType : "application/json",
 		url: "rest/diseasesSearchRest.php?meridien="+$("#search_meridien_input").val()+"&type="+$("#search_type_input").val()+"&desc="+$("#search_patho_input").val(),
 		success: function(data){
+			console.log(data);
 			answer = JSON.parse(data);
 			diseasesToDisplay = [];
 			console.log(answer);
