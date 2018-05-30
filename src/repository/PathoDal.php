@@ -22,9 +22,6 @@ class PathoDal
     public function getList(String $meridien, String $type, String $desc)
     {
         $connClass = new ConnectionBd();
-        var_dump($meridien);
-        var_dump($type);
-        var_dump($desc);
         $conn = $connClass->getConnection();
         $req = 'SELECT meridien.nom, patho.type, patho.desc
         FROM patho

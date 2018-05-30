@@ -13,18 +13,18 @@ if(isset($_GET["meridien"]))
 else
     $meridien = "";
 
-if(isset($_GET["pathologie"]))
-    $pathologie = $_GET["pathologie"];
+if(isset($_GET["type"]))
+    $type = $_GET["type"];
 else
-    $pathologie = "";
+    $type = "";
 
-if(isset($_GET["caracteristique"]))
-    $caracteristique = $_GET["caracteristique"];
+if(isset($_GET["desc"]))
+    $desc = $_GET["desc"];
 else
-    $caracteristique = "";
+    $desc = "";
 
 
 $pathoDal = new PathoDal();
-$pathos = $pathoDal->getList($meridien, $pathologie, $caracteristique);
+$pathos = $pathoDal->getList($meridien, $type, $desc);
 echo json_encode($pathos, JSON_UNESCAPED_UNICODE);
 
