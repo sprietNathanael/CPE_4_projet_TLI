@@ -3,7 +3,7 @@
 {block name=content}
 
 {if not $loggedIn}
-    <form id="connexion_form" action="" method="POST">
+    <form id="connexion_form" action="#" method="POST">
         <h2>Connexion</h2>
         <p>
             <label for="connexion_username_input">Nom d'utilisateur :</label>
@@ -17,7 +17,7 @@
             <input type="submit" name="logIn" value="Se connecter">
         </p>
     </form>
-    <form id="inscription_form" action="" method="POST">
+    <form id="inscription_form" action="#" method="POST">
         <h2>Inscription</h2>
         <p>
             <label for="sign_username_input">Nom d'utilisateur :</label>
