@@ -6,7 +6,7 @@
     <form id="search_form" action="#" method="post">
         <p>Rechercher une pathologie</p>
         <p>
-            <label for="name">Nom :</label>
+            <label for="search_name_input">Nom :</label>
             <input type="text" name="name" id="search_name_input">
         </p>
         <p>
@@ -25,14 +25,12 @@
                             <button id="sortUp_patho" class="sortButton sortUpButton" onclick="sortTable(sort,'name')">
                                 <img
                                     src="assets/icons/sort-alpha-up.svg"
-                                    alt="sort alpha up"
-                                    height="100px"/>
+                                    alt="sort alpha up"/>
                             </button>
                             <button id="sortDown_patho" class="sortButton sortDownButton" onclick="sortTable(sortreverse,'name')">
                                 <img
                                     src="assets/icons/sort-alpha-down.svg"
-                                    alt="sort alpha down"
-                                    height="100px"/>
+                                    alt="sort alpha down"/>
                             </button>
                         </div>
                     </div>
@@ -44,14 +42,12 @@
                             <button id="sortUp_type" class="sortButton sortUpButton" onclick="sortTable(sort,'type')">
                                 <img
                                     src="assets/icons/sort-alpha-up.svg"
-                                    alt="sort alpha up"
-                                    height="100px"/>
+                                    alt="sort alpha up"/>
                             </button>
                             <button id="sortDown_type" class="sortButton sortDownButton" onclick="sortTable(sortreverse,'type')">
                                 <img
                                     src="assets/icons/sort-alpha-down.svg"
-                                    alt="sort alpha down"
-                                    height="100px"/>
+                                    alt="sort alpha down"/>
                             </button>
                         </div>
                     </div>
@@ -63,14 +59,12 @@
                             <button id="sortUp_meridian" class="sortButton sortUpButton" onclick="sortTable(sort,'meridian')">
                                 <img
                                     src="assets/icons/sort-alpha-up.svg"
-                                    alt="sort alpha up"
-                                    height="100px"/>
+                                    alt="sort alpha up"/>
                             </button>
                             <button id="sortDown_meridian" class="sortButton sortDownButton" onclick="sortTable(sortreverse,'meridian')">
                                 <img
                                     src="assets/icons/sort-alpha-down.svg"
-                                    alt="sort alpha down"
-                                    height="100px"/>
+                                    alt="sort alpha down"/>
                             </button>
                         </div>
                     </div>

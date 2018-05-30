@@ -17,16 +17,19 @@ th
 }
 
 thead{
-    background-color: #3172f5b0;
+    /*background-color: #3172f5b0;*/
+    background-color: rgba(49, 114, 245, 0.6);
     color: #FFFFFF;
 }
 
 tbody tr:nth-child(even) {
     background-color: #5286ef4f;
+   /* background-color: rgba(82, 134, 239, 0.5);*/
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #ff980029;
+    /*background-color: #ff980029;*/
+    background-color: rgba(255, 152, 0, 0.2);
 }
 
 .tableHeaderContent
