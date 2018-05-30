@@ -44,18 +44,6 @@
         </p>
     </form>
 {/if}
-{if $loggedIn}
-    <form id="search_form" action="search" method="post">
-        <h2>Recherche</h2>
-        <p>
-            <label for="name">Nom :</label>
-            <input type="text" name="name" id="search_name_input">
-        </p>
-        <p>
-            <button type="submit">Chercher</button>
-        </p>
-    </form>
-{/if}
 <form id="search_form" action="search" method="post">
     <h2>Information</h2>
     <p>

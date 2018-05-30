@@ -50,5 +50,5 @@ $diseases = array(
 $smartyTemplate->assign('diseases', $diseases);
 $smartyTemplate->assign('currentPage', "pathologies");
 $smartyTemplate->assign('stylesheets', ["diseases.css"]);
-$smartyTemplate->assign('scripts', ["diseases.js"]);
-$smartyTemplate->display("diseases.tpl");
+$smartyTemplate->assign('scripts', ["diseases.js", "allDiseases.js"]);
+$smartyTemplate->display("allDiseases.tpl");

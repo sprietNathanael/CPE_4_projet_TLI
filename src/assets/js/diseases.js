@@ -1,4 +1,3 @@
-var diseasesToDisplay = diseases;
 var resultsPerPage = parseInt(document.getElementById("resultsPerPageSelector").value);
 var currentPage = 0;
 var pagesNumber;
