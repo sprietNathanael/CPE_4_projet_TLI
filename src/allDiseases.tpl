@@ -3,7 +3,7 @@
 {block name=content}
 
 <aside>
-    <form id="search_form" action="search" method="post">
+    <form id="search_form" action="#" method="post">
         <p>Rechercher une pathologie</p>
         <p>
             <label for="name">Nom :</label>
