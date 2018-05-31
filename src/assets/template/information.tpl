@@ -30,7 +30,8 @@
     <h3>Php</h3>
 
     <ul>
-
+        <li><a href="http://php.net/manual/fr/session.examples.basic.php">PHP Doc - Sessions</a></li>
+        <li><a href="https://www.w3schools.com/">OpenClassrooms - Tuto sessions</a></li>
     </ul>
 
     <h3>Docker</h3>

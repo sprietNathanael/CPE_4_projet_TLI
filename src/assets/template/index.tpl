@@ -44,10 +44,4 @@
         </p>
     </form>
 {/if}
-<form id="search_form" action="search" method="post">
-    <h2>Information</h2>
-    <p>
-        <button type="submit" onclick>Aperçu</button>
-    </p>
-</form>
 {/block}
