@@ -2,51 +2,42 @@
 {block name=title}Information{/block}
 {block name=content}
 
-<h2>
- <p>Developpements personnels</p>
- <ul>
-  {foreach from=$listDevperso item=foo}
-  <li>{$foo}</li>
-  {/foreach}
- </ul>
-</h2>
+<div>
+    <h2>Auteurs</h2>
+    <ul>
+        <li>Damien Di Ruscio</li>
+        <li>Étienne Durousset</li>
+        <li>Thomas Cordier</li>
+        <li>Thomas Mollaret</li>
+        <li>Rémy Olieric</li>
+        <li>Nathanaël Spriet</li>
+    </ul>
+</div>
 
-<h2>
- <p>Source</p>
- <ul>
-  {foreach from=$listSource item=foo}
-  <li>{$foo}</li>
-  {/foreach}
- </ul>
-</h2>
+<div>
+    <h2>Webographie</h2>
 
-<h2>
- <p>Auteurs</p>
- <ul>
-  {foreach from=$listAuthors item=foo}
-  <li>{$foo}</li>
-  {/foreach}
- </ul>
-</h2>
+    <h3>Front</h3>
 
+    <ul>
+        <li><a href="https://developer.mozilla.org/fr/">Mozilla MDN</a></li>
+        <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+        <li><a href="https://www.alsacreations.com/">AlsaCreations</a></li>
+        <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+        <li><a href="https://api.jquery.com/">JQuery Doc</a></li>
+    </ul>
 
-<h2>
- <p>Bibliographie</p>
- <ul>
-  {foreach from=$listBibliographie item=foo}
-  <li>{$foo}</li>
-  {/foreach}
- </ul>
-</h2>
+    <h3>Php</h3>
 
+    <ul>
 
-<h2>
- <p>Webographie</p>
- <ul>
-  {foreach from=$listWebographie item=foo}
-  <li>{$foo}</li>
-  {/foreach}
- </ul>
-</h2>
+    </ul>
+
+    <h3>Docker</h3>
+
+    <ul>
+
+    </ul>
+</div>
 
 {/block}
