@@ -6,7 +6,7 @@
     <form id="search_form" action="search.php" method="get">
         <h2>Recherche</h2>
         <p>
-            <label for="meridien">Méridien :</label>
+            <label for="search_meridien_input">Méridien :</label>
             <select id="search_meridien_input" name="meridien">
                 <option value="" default>--</option>
                 <option value="-QM">Yin Qiao Mai</option>
@@ -32,7 +32,7 @@
             </select>
         </p>
         <p>
-            <label for="pathologie">Type :</label>
+            <label for="search_type_input">Type :</label>
             <select id="search_type_input" name="pathologie">
                 <option value="" default>--</option>
                 <option value="me">me</option>
@@ -63,7 +63,7 @@
             </select>
         </p>
         <p>
-            <label for="caracteristique">Pathologie :</label>
+            <label for="search_patho_input">Pathologie :</label>
             <input type="text" name="caracteristique" id="search_patho_input">
         </p>
         <p>
@@ -83,14 +83,12 @@
                             <button id="sortUp_patho" class="sortButton sortUpButton" onclick="sortTable(sort,'name')">
                                 <img
                                     src="assets/icons/sort-alpha-up.svg"
-                                    alt="sort alpha up"
-                                    height="100px"/>
+                                    alt="sort alpha up"/>
                             </button>
                             <button id="sortDown_patho" class="sortButton sortDownButton" onclick="sortTable(sortreverse,'name')">
                                 <img
                                     src="assets/icons/sort-alpha-down.svg"
-                                    alt="sort alpha down"
-                                    height="100px"/>
+                                    alt="sort alpha down"/>
                             </button>
                         </div>
                     </div>
@@ -102,14 +100,12 @@
                             <button id="sortUp_type" class="sortButton sortUpButton" onclick="sortTable(sort,'type')">
                                 <img
                                     src="assets/icons/sort-alpha-up.svg"
-                                    alt="sort alpha up"
-                                    height="100px"/>
+                                    alt="sort alpha up"/>
                             </button>
                             <button id="sortDown_type" class="sortButton sortDownButton" onclick="sortTable(sortreverse,'type')">
                                 <img
                                     src="assets/icons/sort-alpha-down.svg"
-                                    alt="sort alpha down"
-                                    height="100px"/>
+                                    alt="sort alpha down"/>
                             </button>
                         </div>
                     </div>
@@ -121,14 +117,12 @@
                             <button id="sortUp_meridian" class="sortButton sortUpButton" onclick="sortTable(sort,'meridian')">
                                 <img
                                     src="assets/icons/sort-alpha-up.svg"
-                                    alt="sort alpha up"
-                                    height="100px"/>
+                                    alt="sort alpha up"/>
                             </button>
                             <button id="sortDown_meridian" class="sortButton sortDownButton" onclick="sortTable(sortreverse,'meridian')">
                                 <img
                                     src="assets/icons/sort-alpha-down.svg"
-                                    alt="sort alpha down"
-                                    height="100px"/>
+                                    alt="sort alpha down"/>
                             </button>
                         </div>
                     </div>

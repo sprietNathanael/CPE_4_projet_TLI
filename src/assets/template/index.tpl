@@ -44,4 +44,10 @@
         </p>
     </form>
 {/if}
+
+<article>
+<p>Bienvenue sur Pikouz.</p>
+<p>Cette application destinée aux acuponcteurs permet de rechercher différentes pathologies en fonction des méridiens et des types de pathologies</p>
+<p>Bonne visite !</p>
+</article>
 {/block}
